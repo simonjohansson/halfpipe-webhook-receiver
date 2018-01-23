@@ -1,0 +1,8 @@
+applications:
+- name: halfpipe-webhooks
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/go-buildpack.git
+  env:
+    GOPACKAGENAME: github.com/simonjohansson/halfpipe-webhook-receiver
+  routes:
+  - route: halfpipe-webhooks.apps.public.gcp.springernature.io
